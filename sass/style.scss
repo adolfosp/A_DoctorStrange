@@ -1,0 +1,327 @@
+@font-face {
+    font-family: 'Marvel';
+    src: url(../font/Captainmarvel-anm9.ttf);
+}
+
+@font-face {
+    font-family: 'Iron-Man';
+    src: url(../font/IronManOfWar2Ncv-E85l.ttf);
+}
+
+@font-face {
+    font-family: 'Noto';
+    src: url(../font/NotoSansJP-Bold.otf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+.app {
+    display: grid;
+    grid-template-areas: "header header"
+        "main main"
+        "footer footer";
+    grid-template-columns: auto;
+    grid-template-rows: 100vh auto auto;
+}
+
+header {
+    grid-area: header;
+
+    p.content__text {
+        color: white;
+        text-shadow: -1px -1px 6px rgba(0, 0, 0, 0.92);
+    }
+
+    nav {
+        ul#navHeader {
+            display: flex;
+            justify-content: flex-start;
+
+            li {
+                margin-right: 2rem;
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+                    font-family: Marvel;
+                    font-size: 15px;
+                    color: white;
+                    text-shadow: -1px -1px 6px rgba(0, 0, 0, 0.92);
+
+                    &:hover {
+                        color: gainsboro;
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+main {
+    background-color: #21212B;
+    grid-area: main;
+
+    h1 {
+        color: White;
+        font-family: Marvel;
+        text-align: center;
+    }
+
+    .infoPower {
+        margin-right: 50px;
+    }
+
+    section#viloes {
+        h1 {
+            margin-top: 120px;
+        }
+
+        div#container {
+            display: grid;
+
+
+
+            #dormammu {
+                background-color: #130312;
+                color: white;
+            }
+
+            #pesadelo {
+                background-color: #342E13;
+                color: white;
+            }
+
+            #kaecilius {
+                background-color: #DE7629;
+                color: white;
+            }
+
+            #barao {
+                background-color: #134A36;
+                color: white;
+            }
+
+            #magus {
+                background-color: #4F1F1E;
+                color: white;
+            }
+
+            #kalu {
+                background-color: #974D5E;
+                color: white;
+            }
+
+            div.vilao {
+                display: flex;
+                flex-wrap: wrap;
+
+                margin-left: 10px;
+                margin-bottom: 10px;
+
+                div.nomeVilao {
+                    width: 50%;
+                    font-size: 50px;
+                    font-family: Iron-Man;
+                    align-self: center;
+                    text-align: center;
+                }
+
+                div#dormamu {
+
+                    background-image: url(../img/dormammu.jpg);
+                    width: 50%;
+                    height: auto;
+                    background-position-x: center;
+
+                    background-size: cover;
+                    background-repeat: no-repeat;
+
+                }
+
+                div#pesadelo {
+                    background-image: url(../img/pesadelo.jpeg);
+                    width: 50%;
+                    height: auto;
+                    background-position-x: center;
+
+                    background-size: cover;
+                    background-repeat: no-repeat;
+
+                }
+
+                div#kaecilius {
+                    background-image: url(../img/kaecilius.jpg);
+                    width: 50%;
+                    height: auto;
+                    background-position-x: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+
+                }
+
+                div#barao {
+                    background-image: url(../img/barao.jpg);
+                    width: 50%;
+                    height: auto;
+                    background-position-x: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+
+                }
+
+                div#magus {
+                    background-image: url(../img/magus.jpg);
+                    width: 50%;
+                    height: auto;
+                    background-position-x: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+
+                }
+
+                div#kalu {
+                    background-image: url(../img/kalu.png);
+                    width: 50%;
+                    height: auto;
+                    background-position-x: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+
+                }
+
+            }
+
+        }
+
+
+
+    }
+
+    section#historia {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        article#mudanca {
+            font-family: Noto;
+            text-align: justify;
+            margin: 10px 100px 30px 100px;
+
+        }
+
+        article#mudanca::first-letter {
+            font-size: 30px;
+
+        }
+
+        article#despertar {
+            font-family: Noto;
+            text-align: justify;
+            margin: 10px 100px 50px 100px;
+        }
+    }
+
+}
+
+footer {
+    grid-area: footer;
+    clip-path: polygon(100% 17%, 100% 100%, 0 100%, 0 28%);
+    background-color: black;
+    height: 40vh;
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 90px;
+        li{
+            font-family: Marvel;
+            font-size: 20px;
+            list-style: none;
+         
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    div#container {
+        grid-template-columns: auto 33.33% 33.33%;
+        grid-template-rows: repeat(6, 200px);
+    }
+
+    section#viloes div#container div.vilao:nth-child(1) {
+        grid-column: 1/4;
+    }
+
+    section#viloes div#container div.vilao:nth-child(2) {
+        grid-column: 1/4;
+    }
+
+    section#viloes div#container div.vilao:nth-child(3) {
+        grid-column: 1/4;
+    }
+
+    section#viloes div#container div.vilao:nth-child(4) {
+        grid-column: 1/4;
+    }
+
+    section#viloes div#container div.vilao:nth-child(5) {
+        grid-column: 1/4;
+    }
+
+    section#viloes div#container div.vilao:nth-child(6) {
+        grid-column: 1/4;
+    }
+
+
+
+}
+
+@media screen and (min-width: 801px) and(max-width: 1100px) {
+
+    div#container {
+        grid-template-columns: auto 33.33% 33.33%;
+        grid-template-rows: repeat(3, 200px);
+    }
+
+    section#viloes div#container div.vilao:nth-child(1) {
+        grid-column: 1/3;
+    }
+
+    section#viloes div#container div.vilao:nth-child(2) {
+        grid-column: 3/5;
+    }
+
+    section#viloes div#container div.vilao:nth-child(3) {
+        grid-column: 1/3;
+    }
+
+    section#viloes div#container div.vilao:nth-child(4) {
+        grid-column: 3/5;
+    }
+
+    section#viloes div#container div.vilao:nth-child(5) {
+        grid-column: 1/3;
+    }
+
+    section#viloes div#container div.vilao:nth-child(6) {
+        grid-column: 3/5;
+    }
+
+}
+
+@media screen and (min-width: 1101px) {
+    div#container {
+        grid-template-columns: auto 33.33% 33.33%;
+        grid-template-rows: repeat(2, 200px);
+    }
+
+}
