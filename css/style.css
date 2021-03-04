@@ -33,6 +33,7 @@ header p.content__text {
 header nav ul#navHeader {
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 header nav ul#navHeader li {
   margin-right: 2rem;
